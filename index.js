@@ -51,9 +51,9 @@ function removeFromCart(item) {
     if (cart[i].itemName == item) {
       cart.splice(i, 1)
       return cart
-    } else {
+    } else if (cart[i].itemName != item) {
         counter += 1
-        if (counter == (cart.length)) {
+        if (counter == cart.length) {
           return `That item is not in your cart.`
         }
     }
