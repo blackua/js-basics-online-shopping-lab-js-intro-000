@@ -46,14 +46,15 @@ function total() {
 }
 
 function removeFromCart(item) {
+  let counter = 0
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].itemName == item) {
       cart.splice(i, 1)
       return cart
     }
+  }
     console.log("That item is not in your cart.")
     return cart
-  }
 }
 
 function placeOrder(cardNumber) {
